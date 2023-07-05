@@ -1,0 +1,53 @@
+.......
+
+......steps......
+
+1.create package.json
+ ..npm init -y
+
+2.setup express,mongose,cors
+ npm i express cors mongoose dotenv
+
+ dotenv-environment variables are used to store app secret and configurtion data
+  which are retrived by the running  app when needed 
+  
+  TYPES.
+  system environment variables(s/m path)
+  user environment  variables(admin)
+  runtime/process variables (appliction running process)
+
+  3. create .env file
+  4.create .gitignore
+  5.add .env , node modules in gitignore
+  6.create index.js
+  7.in index
+   ...import express,cors,.env
+   ...create an app using express
+   ...use cors and express.jspn() in server app
+   ...define port number
+
+   .....mongo db atlas configg.....
+
+   1.copy connecction string from atlas and paste it in .env
+   2.create a db folder in server,inside create a connection.js
+   3.in connection.js file import monggose
+   4.get db connction string from .env file
+   5.use mongoose to connect mongodb with nodejs
+   6.import connection.js in index.js
+   7.create a model in server
+   8.create a file to collection of products
+   9.export model
+   10. create a router for client request -create a router folder inside it create  a file router.js
+     >. inside router.js import express
+     >.using express create a object for router class inorder to setup path
+     >.resolve client request in various server routes
+
+   11.create controller folder inorder to define logic to reterive client request
+     >.controller(folder)
+      .productController.js
+      .cartController.js
+      .wishlistController.js  
+
+     >.inside productController file
+        import product collection
+        define logic to resolve client request      
